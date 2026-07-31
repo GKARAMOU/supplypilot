@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:supplypilot;MODE=PostgreSQL;DB_CLOSE_DELAY=-1
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: create-drop
+  flyway:
+    enabled: false
+  cache:
+    type: none
+  rabbitmq:
+    listener:
+      simple:
+        auto-startup: false
+
+app:
+  jwt:
+    secret: c3VwcGx5cGlsb3QtdGVzdC1zZWNyZXQtbXVzdC1iZS1hdC1sZWFzdC0zMi1ieXRlcw==
+  demo-user:
+    username: demo
+    password: supplypilot
+  cors:
+    allowed-origins: http://localhost:3000
